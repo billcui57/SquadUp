@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="h-100 d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="card-deck">
+            <div class="card" *ngFor="let game of this.games" >
+                <img class="card-img-top gameImage" src={{game.imagesrc}} alt={{game.name}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{game.name}}</h5>
+                    <p class="card-text">{{game.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
