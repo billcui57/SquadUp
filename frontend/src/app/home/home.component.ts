@@ -13,8 +13,20 @@ export class HomeComponent implements OnInit {
   games:Game[] = [];
 
   ngOnInit(): void {
-    this.games = this.gameService.getGames();
+    this.gameService.getAllGames().subscribe((data)=> {
+      let listOfGames: any[] = data["results"];
 
+      listOfGames.forEach(
+        (game) => {
+          this.games.push(new Game (game["name"], game["background_image"]))
+        }
+      )
+    },
+    err => {
+
+    })
+
+    
   }
 
 }
