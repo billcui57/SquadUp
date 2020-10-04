@@ -7,13 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GroupsComponent } from './groups/groups.component';
+import { GroupComponent } from './group/group.component';
+import { GroupchatComponent } from './groupchat/groupchat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    GroupsComponent
+    GroupsComponent,
+    GroupComponent,
+    GroupchatComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,3 @@
+<div *ngFor="let group of groups, let i = index">
+  <a routerLink="/games/{{group.gameId}}/groups/{{group.groupId}}">Group {{i+1}} {{group.users.length}}/2</a>
+</div>

@@ -2,8 +2,8 @@
     <div class="container">
         <div class="card-deck">
 
-            <div class="card" *ngFor="let game of this.games" style="width: 30rem;">
-                <a routerLink="/bruh">
+            <div class="card" *ngFor="let game of this.games" >
+                <a routerLink="/games/{{game.gameId}}/groups">
                     <img class="card-img-top gameImage" src={{game.imagesrc}} alt={{game.name}}>
                     <div class="card-body">
                         <h5 class="card-title">{{game.name}}</h5>

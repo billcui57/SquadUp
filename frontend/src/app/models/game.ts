@@ -1,10 +1,13 @@
 export class Game {
-  constructor(name:string, imagesrc:string) {
+  constructor(gameId: string, name:string, imagesrc:string) {
+    this.gameId = gameId;
     this.name=name;
     this.imagesrc=imagesrc;
   }
 
+  gameId:string;
   name:string;
   imagesrc:string;
-
 }
+
+

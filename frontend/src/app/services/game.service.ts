@@ -14,4 +14,10 @@ export class GameService {
   getAllGames():Observable<void>{
     return this.http.get<void>(`https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-added&page_size=5`);
   }
+
+  getGameById(id:Number):Observable<void>{
+    return this.http.get<void>('https://api.rawg.io/api/games/'+id);
+  }
+
+  
 }

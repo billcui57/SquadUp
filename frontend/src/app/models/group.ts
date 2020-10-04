@@ -2,11 +2,13 @@ import { Game } from './game';
 import { User } from './user';
 
 export class Group{
-  constructor(game:Game, users:User[]){
-      this.game=game;
+  constructor( gameId:number, users:User[], groupId: number){
+      this.gameId=gameId;
       this.users=users;
+      this.groupId=groupId;
   }
 
-  game:Game;
+  gameId:number;
   users:User[];
+  groupId:number;
 }

@@ -18,7 +18,9 @@ export class HomeComponent implements OnInit {
 
       listOfGames.forEach(
         (game) => {
-          this.games.push(new Game (game["name"], game["background_image"]))
+          let newGame = new Game (game["id"], game["name"], game["background_image"])
+          this.games.push(newGame)
+          
         }
       )
     },
